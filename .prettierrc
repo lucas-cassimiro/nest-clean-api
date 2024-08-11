@@ -1,0 +1,14 @@
+{
+  "semi": false,
+  "overrides": [
+    {
+      "files": ["src/**/*.ts", "test/**/*.ts"],
+      "options": {
+        "semi": false,
+        "tabWidth": 4,
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    }
+  ]
+}
