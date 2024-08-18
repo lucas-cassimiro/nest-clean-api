@@ -6,10 +6,10 @@ import {
     ConflictException,
     UsePipes,
 } from '@nestjs/common'
-import { PrismaService } from 'src/prisma/prisma.service'
+import { PrismaService } from '@/prisma/prisma.service'
 import { hash } from 'bcryptjs'
 import { z } from 'zod'
-import { ZodValidationPipe } from 'src/pipes/zod-validation-pipe'
+import { ZodValidationPipe } from '@/pipes/zod-validation-pipe'
 
 const createAccountBodySchema = z.object({
     name: z.string(),
@@ -19,7 +19,7 @@ const createAccountBodySchema = z.object({
 
 type CreateAccountBodySchema = z.infer<typeof createAccountBodySchema>
 
-@Controller('/users')
+@Controller('/signup')
 export class SignUpController {
     constructor(private readonly prisma: PrismaService) {}
 
